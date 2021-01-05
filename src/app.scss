@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600;700&display=swap');
+
+:root {
+
+    --font-Poppins: 'Poppins', sans-serif;
+    --font-open-sans: 'Open Sans', sans-serif;
+    --font-weight-bold: 700;
+    --font-weight-semibold: 600;
+
+    --color-primary: #2B2ECF;
+    --color-secondary: #FF0066;
+    --color-yellow: #F6C937;
+    --color-body-bg: #E7EDF6;
+    --color-body-text: #7F8A9C;
+    --sidebar-gradient: linear-gradient(135deg, #2B2ECF 0%, #652BCF 100%);
+
+    --border-radius-10: 10px;
+    --border-radius-20: 20px;
+    --border-radius-30: 30px;
+
+    --card-shadow: 0px 8px 20px rgb(43,46,207, 0.5);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}

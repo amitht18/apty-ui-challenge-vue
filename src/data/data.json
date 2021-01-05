@@ -1,0 +1,30 @@
+{
+    "name": "St",
+    "previewInListMode": true,
+    "cities": [
+        {
+            "name": "Delhi",
+            "description": "this is a  city",
+            "labels": [
+                "crowdy",
+                "busy"
+            ],
+            "isSelected": false,
+            "comment": "",
+            "liked": false,
+            "imageLink": "delhi.jpg"
+        },
+        {
+            "name": "Hyderabad",
+            "description": "this is a great city",
+            "labels": [
+                "Chill",
+                "Hot"
+            ],
+            "isSelected": false,
+            "comment": "",
+            "liked": false,
+            "imageLink": "delhi.jpg"
+        }
+    ]
+}
