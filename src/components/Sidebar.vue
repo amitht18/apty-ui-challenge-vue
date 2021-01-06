@@ -30,7 +30,7 @@ import "./../app.scss";
 <style lang="scss" scoped>
 .sidebar {
     width: 100px;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 40px);
     background-color: var(--color-primary);
     display: flex;
     flex-direction: column;
