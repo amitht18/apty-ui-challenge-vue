@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar">
         <div class="sidebar-top">
-            <div class="logo"></div>
+            <div class="icon logo"></div>
             <ul>
                 <li class="icon home active"></li>
                 <li class="icon briefcase"></li>
@@ -21,25 +21,8 @@
 </template>
 
 <script>
-import "./../app.scss";
+import './styles/sidebar.scss';
     export default {
         
     }
 </script>
-
-<style lang="scss" scoped>
-.sidebar {
-    width: 100px;
-    height: calc(100vh - 40px);
-    background-color: var(--color-primary);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: var(--border-radius-20);
-
-    ul li {
-        list-style-type: none;
-    }
-
-}
-</style>
