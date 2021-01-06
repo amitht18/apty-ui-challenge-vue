@@ -4,6 +4,7 @@
 
 <script>
 import Main from "./components/Main"
+import "./app.scss";
 
 export default {
   components: {
@@ -25,5 +26,6 @@ export default {
   background-color: var(--color-body-bg);
   padding: 20px 20px 0px 20px;
   height: calc(100% - 20px);
+  display: flex;
 }
 </style>
