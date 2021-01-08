@@ -1,11 +1,11 @@
 .content {
     width: 100%;
-    padding: 20px;
-    padding-right: 10px;
 
     .top-bar {
         display: flex;
         justify-content: space-between;
+        padding: 40px 30px;
+        padding-left: 10px;
 
         &__headline {
             font-family: var(--font-Poppins);
@@ -23,11 +23,38 @@
             padding: 5px;
             background-color: #FFF;
 
-            .card, .list {
+            .grid,
+            .list {
                 height: 40px;
                 width: 40px;
                 border-radius: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                cursor: pointer;
+
+                &.active {
+                    background-color: var(--color-primary);
+                }
+            }
+
+            .grid {
+                background-image: url(../../assets/icons/grid-view-icon.svg);
+            }
+
+            .list {
+                background-image: url(../../assets/icons/list-view-icon.svg);
             }
         }
+    }
+
+    .cards-container {
+        height: calc(100% - 130px);
+        overflow: auto;
+        display: flex;
+        flex-flow: column wrap;
+        max-height: 800px;
+        margin-left: -8px;
+        /* Adjustment for the gutter */
+        width: 100%;
     }
 }
