@@ -1,5 +1,6 @@
 <template>
   <div class='card'>
+    <Checkbox v-bind:checkFor='id'/>
     <div class='card-image' :style="{ backgroundImage: 'url(' + require('@/assets/images/' + cityData.imageLink) + ')' }"></div>
     <div class='card-labels'>
       <div
@@ -24,8 +25,12 @@
 
 <script>
 import './styles/card.scss';
+import Checkbox from './Checkbox';
 
 export default {
   props: ['cityData'],
+  components: {
+    Checkbox
+  }
 };
 </script>
