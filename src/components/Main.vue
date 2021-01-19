@@ -1,19 +1,22 @@
 <template>
   <Sidebar />
   <div class="content">
-    <div class="top-bar">
-      <h1 class="top-bar__headline">Discover great places to visit</h1>
-      <div class="top-bar__toggle">
-        <div class="grid active"></div>
-        <div class="list"></div>
+    <div class="top">
+      <div class="top-bar">
+        <h1 class="top-bar__headline">Discover great places to visit</h1>
+        <div class="top-bar__toggle">
+          <div class="grid" v-on:click="setCardMode()" :class="appData.previewInListMode ? '' : 'active'"></div>
+          <div class="list" v-on:click="setListMode()" :class="appData.previewInListMode ? 'active' : ''"></div>
+        </div>
       </div>
     </div>
     <div class="cards">
       <div class="cards-container">
         <Card
-          v-for="card in appData.cities"
-          :key="card.name"
+          v-for="(card, index) in appData.cities"
+          :key="card.id"
           v-bind:cityData="card"
+          v-bind:index='index'
         />
         <span class="card break"></span>
         <span class="card break"></span>
@@ -24,7 +27,7 @@
 </template>
 
 <script>
-import cityData from "./../data/data.json";
+// import cityData from "./../data/data.json";
 import Card from "./Card.vue";
 import Sidebar from "./Sidebar";
 import "./styles/main.scss";
@@ -36,8 +39,16 @@ export default {
   },
   data() {
     return {
-      appData: cityData,
+      appData: this.$store.state,
     };
   },
+  methods: {
+    setCardMode: function () {
+      this.$store.commit('setCardView')
+    },
+    setListMode: function () {
+      this.$store.commit('setListView')
+    }
+  }
 };
 </script>

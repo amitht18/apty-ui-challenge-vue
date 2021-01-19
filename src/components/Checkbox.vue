@@ -1,7 +1,7 @@
 <template>
   <div class="checkbox-container">
     <div class="checkbox-round">
-      <input type="checkbox" id="checkbox" :checked='true' />
+      <input type="checkbox" :id='checkFor' :checked='false' />
       <label :for='checkFor'></label>
     </div>
   </div>

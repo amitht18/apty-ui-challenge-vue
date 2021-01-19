@@ -92,14 +92,16 @@
         .comment {
             background-image: url(../../assets/icons/message-square.svg);
             margin-right: 15px;
+
+            &.active {
+                background-image: url(../../assets/icons/message-square-active.svg);
+            }
         }
         .like {
             background-image: url(../../assets/icons/heart.svg);
-
+            
             &.active {
-                svg path {
-                    fill: cvar(--color-secondary)
-                }
+                background-image: url(../../assets/icons/heart-active.svg);
             }
         }
     }
